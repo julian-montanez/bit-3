@@ -1,0 +1,15 @@
+.navegador{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: sans-serif;
+    position: sticky;
+    top: 0;
+    height: 50px;
+    font-size: 30px;
+    background-color: brown;
+}
+
+.navegador > a{
+    text-decoration: none;
+}
