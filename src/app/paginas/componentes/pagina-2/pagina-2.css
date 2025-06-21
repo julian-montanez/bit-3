@@ -1,0 +1,42 @@
+.contenedor{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: auto;
+    box-sizing: border-box;
+    background-color: gray;
+    border-radius: 30px;
+}
+
+.carta{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 200px;
+    height: 300px;
+    background-color: aqua;
+    margin: 20px;
+}
+
+.imagen-cocktails{
+    width: 150px;
+    height: 200px;
+    transition: 0.3s;
+}
+
+.carta:hover > .imagen-cocktails{
+    scale: 1.02;
+    transition: 0.3s;
+}
+
+.carta{
+    text-decoration: none;
+}
+
+.carta > p{
+    margin: 0;
+    color: black;
+}

@@ -1,1 +1,15 @@
-<p>pagina-2 works!</p>
+<div>
+    
+</div>
+<div class="contenedor">
+    @for(drink of cocktails; track $index){
+        <a href="#" class="carta">
+            <img [src]="drink.strDrinkThumb" class="imagen-cocktails" alt="imagen{{drink.strDrink}}">
+            <p>{{drink.strDrink}}</p>
+            <p>{{drink.strAlcoholic}}</p>
+        </a>
+    }
+</div>
+<div>
+
+</div>
