@@ -6,13 +6,17 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class Api {
-  apiIndex = "a";
+  apiIndex: string = "a";
 
-  private apiUrl = `https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${this.apiIndex}`;
+  private apiUrl = "https://fakestoreapi.com/products";
 
   constructor(private http: HttpClient) {}
 
-  getCocktails(): Observable<any> {
+  public getproducts(): Observable<any> {
     return this.http.get<any>(this.apiUrl);
+  }
+
+  public getproductsInfoId(id: number): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}/${id}`);
   }
 }

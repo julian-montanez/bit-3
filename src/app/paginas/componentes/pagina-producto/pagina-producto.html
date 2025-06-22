@@ -1,0 +1,16 @@
+<div class="contenedor-categorias">
+    <div>
+        <p>categoria</p>
+    </div>
+</div>
+<div class="contenedor">
+    @for(drink of cocktails; track $index){
+        <a routerLink="/pagina-bebida/{{drink.id}}/{{drink.title}}" class="carta">
+            <img [src]="drink.image" class="imagen-cocktails" alt="imagen{{drink.title}}">
+            <p>{{drink.title}}</p>
+            <p>{{drink.price}}</p>
+            
+        </a>
+    }
+</div>
+
