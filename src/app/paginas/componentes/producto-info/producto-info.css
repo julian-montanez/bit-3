@@ -1,0 +1,30 @@
+.contenedor-producto{
+    width: 90%;
+    height: 600px;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.contenedor-imagen{
+    width: 35%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: brown;
+}
+
+.contenedor-informacion{
+    width: 65%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: burlywood;
+}
+
+.image-product{
+    width: 320px;
+}

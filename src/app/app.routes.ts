@@ -1,8 +1,9 @@
 import { Routes } from '@angular/router';
 import { Inicio } from './paginas/componentes/inicio/inicio';
 import { PaginaNoEncontrada } from './paginas/componentes/pagina-no-encontrada/pagina-no-encontrada';
+import { ProductoInfo } from './paginas/componentes/producto-info/producto-info';
 import { PaginaProducto } from './paginas/componentes/pagina-producto/pagina-producto';
-import { productoInfo } from './paginas/componentes/producto-info/producto-info';
+
 
 export const routes: Routes = [
     {
@@ -13,12 +14,12 @@ export const routes: Routes = [
     {
         path: "pagina-producto",
         component: PaginaProducto,
-        title: "pagina-2 | bit-3"
+        title: "pagina-producto | bit-3"
     },
     {
-        path: "pagina-bebida/:id/:name",
-        component: productoInfo,
-        title: "bebida | bit-3"
+        path: "producto-info/:id/:name",
+        component: ProductoInfo,
+        title: "producto-info | bit-3"
     },
     {
         path: "",

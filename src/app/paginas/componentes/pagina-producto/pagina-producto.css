@@ -44,8 +44,65 @@
 .contenedor-categorias{
     display: flex;
     flex-direction: row;
+    align-items: center;
     margin: auto;
-    justify-content: center;
+    box-sizing: border-box;
     margin: 30px 0;
+    padding: 5px;
     background-color: rgb(240, 141, 12);
+}
+
+.boton-cat{
+    width: 100px;
+    margin: 0 0 0 100px;
+    text-align: center;
+    font-family: sans-serif;
+    background-color: aqua;
+}
+
+.boton-cat:hover ~ .categorias{
+    width: 700px;
+    padding: 0 0 0 30px;
+    transition: 1s;
+} 
+
+.categorias{
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    box-sizing: border-box;
+    background-color: cadetblue;
+    transition: 1s;
+}
+
+.categorias > p {
+    min-width: 90px;
+    text-align: center;
+    margin: 0 30px 0 0;
+    padding: 7px;
+    cursor: pointer;
+    font-family: sans-serif;
+    background-color: antiquewhite;
+}
+
+.categorias p.activa{
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.producto14{ /*ropa de hombres*/
+    background-color: rgb(40, 225, 89);
+}
+
+.producto8{ /*joyeria*/
+    background-color: rgb(59, 40, 225);
+}
+
+.producto11{ /*joyeria*/
+    background-color: rgb(225, 55, 40);
+}
+
+.producto16{ /*joyeria*/
+    background-color: rgb(194, 225, 40);
 }

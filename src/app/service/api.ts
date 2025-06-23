@@ -6,7 +6,6 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class Api {
-  apiIndex: string = "a";
 
   private apiUrl = "https://fakestoreapi.com/products";
 

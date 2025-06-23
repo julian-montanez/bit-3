@@ -1,16 +1,21 @@
 <div class="contenedor-categorias">
-    <div>
+    <div class="boton-cat">
         <p>categoria</p>
+    </div>
+    <div class="categorias">
+        <p 
+        *ngFor="let cat of categorias" 
+        (click)="seleccionarCategoria(cat)"
+        [class.activa]="cat === categoriaSeleccionada">
+        {{cat}}</p>
     </div>
 </div>
 <div class="contenedor">
-    @for(drink of cocktails; track $index){
-        <a routerLink="/pagina-bebida/{{drink.id}}/{{drink.title}}" class="carta">
-            <img [src]="drink.image" class="imagen-cocktails" alt="imagen{{drink.title}}">
-            <p>{{drink.title}}</p>
-            <p>{{drink.price}}</p>
-            
+    @for(product of productoFiltrado; track $index){
+        <a routerLink="/producto-info/{{product.id}}/{{product.title}}" class="carta producto{{product.category.length}}">
+            <img [src]="product.image" class="imagen-cocktails" alt="imagen{{product.title}}">
+            <p>{{product.title}}</p>
+            <p>{{product.price}}</p>
         </a>
     }
 </div>
-

@@ -1,1 +1,13 @@
-<p>pagina-bebida works!</p>
+<div class="contenedor-producto">
+    <div class="contenedor-imagen">
+        <img [src]="product.image" class="image-product" alt="producto: {{product.title}}">
+    </div>
+    <div class="contenedor-informacion">
+        <div class="info-1"><p>categoria: {{product.category}}</p></div>
+        <div class="info-2"><h2>{{product.title}}</h2></div>
+        <div class="info-3"><p>{{product.description}}</p></div>
+        <div class="info-4"><p>{{product.rate}}|{{product.count}}</p></div>
+        <div class="info-5"><p>{{product.price}}</p></div>
+        <div class="button">ir al producto</div>
+    </div>
+</div>
