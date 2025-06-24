@@ -67,26 +67,26 @@ body{
 }
 
 .boton-cat:hover ~ .categorias{
-    width: 750px;
+    width: 800px;
     transition: .2s;
     border-right: 3px solid black;
 }  
 
 .categorias{
     width: 0;
-    height: 65px;
     display: flex;
     flex-direction: row;
     overflow: hidden;
     box-sizing: border-box;
     align-items: center;
+    justify-content: center;
     transition: 1s;
     transition-delay: 7s;
     border-radius: 0 20px 20px 0;
 }
 
 .categorias:hover{
-    width: 750px;
+    width: 800px;
     transition: 1s;
     border-right: 3px solid black;
 }
@@ -95,8 +95,9 @@ body{
 .categorias > p {
     min-width: 90px;
     text-align: center;
-    margin: 0 20px;
+    margin: 5px 20px;
     padding: 7px;
+    text-wrap: nowrap;
     cursor: pointer;
     font-family: sans-serif;
     font-weight: 700;
@@ -196,4 +197,12 @@ body{
     scale: 1.02;
     color: brown;
     transition: 0.2s;
+}
+
+@media (max-width: 992px) {
+
+    .categorias{
+        width: 50vw;
+        flex-wrap: wrap;
+    }
 }

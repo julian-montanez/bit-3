@@ -4,7 +4,7 @@ import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-navegador',
-  imports: [RouterLink, UpperCasePipe],
+  imports: [RouterLink],
   templateUrl: './navegador.html',
   styleUrl: './navegador.css'
 })
