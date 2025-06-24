@@ -1,13 +1,27 @@
-<div class="contenedor-producto">
-    <div class="contenedor-imagen">
-        <img [src]="product.image" class="image-product" alt="producto: {{product.title}}">
+@defer () {
+    <div class="contenedor-producto">
+        <div (click)="atras()" class="btn-atras">
+            <i class="bi bi-arrow-bar-left"></i>
+        </div>
+        <div class="contenedor-imagen">
+            <img [src]="product.image" class="image-product" title="producto: {{product.title}}">
+        </div>
+        <div class="contenedor-informacion">
+            <div class="info-1"><p><span>category:</span> {{product.category}}</p></div>
+            <div class="info-2"><h2>{{product.title}}</h2></div>
+            <div class="info-3"><p>{{product.description}}</p></div>
+            <div class="info-4"><p><span>★</span>{{product.rate}} | <b>Reviews:</b> {{product.count}}</p></div>
+            <div class="info-5">
+                <p class="precio-original">{{product.price + 12 | currency}}</p>
+                <p class="precio-descuento">{{product.price | currency}}</p>
+            </div>
+            <a href="https://www.mercadolibre.com.co/" target="_blank" class="button">buy on <img [src]="logoML" class="logo-ML" alt="logo-mercado-libre"></a>
+        </div>
+    </div>} @loading (minimum 3s) {
+    <div class="contenedor-spinner">
+        <div class="spinner-border text-secondary" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
     </div>
-    <div class="contenedor-informacion">
-        <div class="info-1"><p>categoria: {{product.category}}</p></div>
-        <div class="info-2"><h2>{{product.title}}</h2></div>
-        <div class="info-3"><p>{{product.description}}</p></div>
-        <div class="info-4"><p>{{product.rate}}|{{product.count}}</p></div>
-        <div class="info-5"><p>{{product.price}}</p></div>
-        <div class="button">ir al producto</div>
-    </div>
-</div>
+}
+

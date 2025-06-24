@@ -1,13 +1,116 @@
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor-spinner{
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner-border{
+    height: 100px;
+    width: 100px;
+    font-size: 40px;
+}
+
 .contenedor{
     width: 90%;
+    min-height: 550px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    align-items: center;
     margin: auto;
     box-sizing: border-box;
-    background-color: gray;
+    background-color: rgb(160, 160, 160);
     border-radius: 30px;
+    border-top: 5px solid brown;
+}
+
+.contenedor-categorias{
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-sizing: border-box;
+    margin: auto;
+    margin-bottom: 40px;
+    padding: 5px;
+    background-color: rgb(160, 160, 160);
+    border-radius: 20px;
+    border-bottom: 5px solid brown ;
+}
+
+.boton-cat{
+    width: 100px;
+    margin: 0 0 0 100px;
+    padding-top: 13px;
+    text-align: center;
+    font-family: sans-serif;
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: #deb887;
+    border-radius: 20px;
+    border: 3px solid black;
+    cursor: pointer;
+}
+
+.boton-cat:hover{
+    background-color: #e19f49;
+}
+
+.boton-cat:hover ~ .categorias{
+    width: 750px;
+    transition: .2s;
+    border-right: 3px solid black;
+}  
+
+.categorias{
+    width: 0;
+    height: 65px;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    box-sizing: border-box;
+    align-items: center;
+    transition: 1s;
+    transition-delay: 7s;
+    border-radius: 0 20px 20px 0;
+}
+
+.categorias:hover{
+    width: 750px;
+    transition: 1s;
+    border-right: 3px solid black;
+}
+
+
+.categorias > p {
+    min-width: 90px;
+    text-align: center;
+    margin: 0 20px;
+    padding: 7px;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-weight: 700;
+    background-color: #deb887;
+    border-radius: 10px;
+}
+
+.categorias > p:hover {
+    background-color: #b99a71;
+    color: rgb(39, 39, 39);
+    border-left: 2px solid black;
+    box-sizing: border-box;
+}
+
+.categorias p.activa{
+    color: brown;
 }
 
 .carta{
@@ -15,25 +118,30 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    width: 200px;
-    height: 300px;
-    background-color: aqua;
-    margin: 20px;
+    width: 250px;
+    height: 400px;
+    background-color: white;
+    margin: 35px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: .5s;
 }
 
-.imagen-cocktails{
-    width: 150px;
+.carta:hover{
+    outline: 3px solid brown;
+    transition: .5s;
+}
+
+.imagen-product{
+    margin-top: 10px;
+    width: 200px;
     height: 200px;
     transition: 0.3s;
 }
 
-.carta:hover > .imagen-cocktails{
+.carta:hover > .imagen-product{
     scale: 1.02;
     transition: 0.3s;
-}
-
-.carta{
-    text-decoration: none;
 }
 
 .carta > p{
@@ -41,68 +149,49 @@
     color: black;
 }
 
-.contenedor-categorias{
+.carta > .precio{
     display: flex;
     flex-direction: row;
+    justify-content: center;
     align-items: center;
-    margin: auto;
-    box-sizing: border-box;
-    margin: 30px 0;
-    padding: 5px;
-    background-color: rgb(240, 141, 12);
+    font-size: 25px;
 }
 
-.boton-cat{
-    width: 100px;
-    margin: 0 0 0 100px;
+.precio > .precio-original{
+    font-size: 20px;
+    margin-right: 20px;
+    color: red;
+    font-weight: 500;
+    text-decoration: line-through;
+}
+
+.precio >  .precio-descuento{
+    font-size: 25px;
+    color: green;
+    font-weight: 500;
+}
+
+.title{
     text-align: center;
+    padding: 0 20px;
     font-family: sans-serif;
-    background-color: aqua;
+    transition: 0.2s;
 }
 
-.boton-cat:hover ~ .categorias{
-    width: 700px;
-    padding: 0 0 0 30px;
-    transition: 1s;
-} 
-
-.categorias{
-    display: flex;
-    flex-direction: row;
-    overflow: hidden;
-    box-sizing: border-box;
-    background-color: cadetblue;
-    transition: 1s;
+.carta:hover > .title{
+    scale: 1.02;
+    color: brown;
+    transition: 0.2s;
 }
 
-.categorias > p {
-    min-width: 90px;
-    text-align: center;
-    margin: 0 30px 0 0;
-    padding: 7px;
-    cursor: pointer;
-    font-family: sans-serif;
-    background-color: antiquewhite;
+.precio{
+    font-size: 25px;
+    font-weight: 600;
+    transition: 0.2s;
 }
 
-.categorias p.activa{
-    background-color: #007bff;
-    color: white;
-    border-color: #007bff;
-}
-
-.producto14{ /*ropa de hombres*/
-    background-color: rgb(40, 225, 89);
-}
-
-.producto8{ /*joyeria*/
-    background-color: rgb(59, 40, 225);
-}
-
-.producto11{ /*joyeria*/
-    background-color: rgb(225, 55, 40);
-}
-
-.producto16{ /*joyeria*/
-    background-color: rgb(194, 225, 40);
+.carta:hover > .precio{
+    scale: 1.02;
+    color: brown;
+    transition: 0.2s;
 }

@@ -1,21 +1,33 @@
-<div class="contenedor-categorias">
-    <div class="boton-cat">
-        <p>categoria</p>
+@defer ( ) {
+    <div class="contenedor-categorias">
+        <div class="boton-cat">
+            <p>category</p>
+        </div>
+        <div class="categorias">
+            <p 
+            *ngFor="let cat of categorias" 
+            (click)="seleccionarCategoria(cat)"
+            [class.activa]="cat === categoriaSeleccionada">
+            {{cat}}</p>
+        </div>
     </div>
-    <div class="categorias">
-        <p 
-        *ngFor="let cat of categorias" 
-        (click)="seleccionarCategoria(cat)"
-        [class.activa]="cat === categoriaSeleccionada">
-        {{cat}}</p>
+    <div class="contenedor">
+        @for(product of productoFiltrado; track $index){
+            <a routerLink="/producto-info/{{product.id}}/{{product.title}}" class="carta producto{{product.category.length}}">
+                <img [src]="product.image" class="imagen-product" alt="imagen{{product.title}}">
+                <p class="title">{{product.title}}</p>
+                <div class="precio">
+                    <p class="precio-original">{{product.price + 12 | currency}}</p>
+                    <p class="precio-descuento">{{product.price | currency}}</p>
+                </div>
+            </a>
+        }
+    </div>} @loading (minimum 1s) {
+    <div class="contenedor-spinner">
+        <div class="spinner-border text-secondary" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
     </div>
-</div>
-<div class="contenedor">
-    @for(product of productoFiltrado; track $index){
-        <a routerLink="/producto-info/{{product.id}}/{{product.title}}" class="carta producto{{product.category.length}}">
-            <img [src]="product.image" class="imagen-cocktails" alt="imagen{{product.title}}">
-            <p>{{product.title}}</p>
-            <p>{{product.price}}</p>
-        </a>
-    }
-</div>
+}
+
+

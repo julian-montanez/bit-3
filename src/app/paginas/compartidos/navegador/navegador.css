@@ -1,16 +1,47 @@
 .navegador{
     display: flex;
-    justify-content: space-evenly;
+    justify-content:space-between;
     align-items: center;
     font-family: sans-serif;
     position: sticky;
     top: 0;
+    z-index: 1;
     margin-bottom: 50px;
-    height: 50px;
     font-size: 30px;
-    background-color: brown;
+    background-color: #deb887;
+    border-radius: 0 0 10px 10px;
+    border-bottom: 5px solid brown;
 }
 
-.navegador > a{
+.opciones > a{
     text-decoration: none;
+    margin-right: 60px;
+    font-weight: 700;
+    box-sizing: border-box;
+    color: #214b47;
+    text-transform: uppercase;
+    padding: 5px;
+    transition: 0.1s;
+}
+
+.opciones > a:hover{
+    color: #387c75;
+    box-sizing: border-box;
+    border: 1px solid #387c75;
+    border-radius: 10px;
+    transition: 0.1s;
+}
+
+.opciones > a:active{
+    color: #214b47;
+    border: 2px solid #214b47;
+}
+
+.imagen-logo{
+    height: 70px;
+    margin-left: 50px;
+}
+
+.imagen-nombre{
+    height: 80px;
 }

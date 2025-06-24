@@ -2,10 +2,11 @@ import { Component, OnInit, inject } from '@angular/core';
 import { Api } from '../../../service/api';
 import { RouterLink } from '@angular/router';
 import { NgForOf } from '@angular/common';
+import { CurrencyPipe } from '@angular/common';
 
 @Component({
   selector: 'app-pagina-producto',
-  imports: [RouterLink, NgForOf],
+  imports: [RouterLink, NgForOf, CurrencyPipe],
   templateUrl: './pagina-producto.html',
   styleUrl: './pagina-producto.css'
 })
@@ -28,11 +29,11 @@ export class PaginaProducto implements OnInit {
     });
   }
 
-  categorias: string[] = ["todo", "men's clothing", "jewelery", "electronics", "women's clothing"]
-  categoriaSeleccionada: string = "todo";
+  categorias: string[] = ["all", "men's clothing", "jewelery", "electronics", "women's clothing"]
+  categoriaSeleccionada: string = "all";
   
   get productoFiltrado() {
-    if(this.categoriaSeleccionada === "todo") {
+    if(this.categoriaSeleccionada === "all") {
       return this.products;
     }
     return this.products.filter(producto => producto.category === this.categoriaSeleccionada);

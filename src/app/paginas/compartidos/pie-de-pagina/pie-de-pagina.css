@@ -1,7 +1,9 @@
 .PDP{
     display: flex;
     justify-content: center;
+    position: static;
+    bottom: 0px;
     height: 100px;
-    background-color: aquamarine;
+    background-color: #deb887;
     margin-top: 50px;
 }
