@@ -18,6 +18,7 @@ body{
 
 .contenedor{
     width: 90%;
+    min-width: 575px;
     min-height: 550px;
     display: flex;
     flex-direction: row;
@@ -33,6 +34,7 @@ body{
 
 .contenedor-categorias{
     width: 90vw;
+    min-width: 575px;
     display: flex;
     flex-direction: row;
     align-items: center;

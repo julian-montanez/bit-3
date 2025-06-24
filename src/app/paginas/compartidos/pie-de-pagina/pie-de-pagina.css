@@ -1,9 +1,63 @@
-.PDP{
+.contenedor-PDP{
+    width: 100%;
+    min-width: 575px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     position: static;
     bottom: 0px;
-    height: 100px;
     background-color: #deb887;
     margin-top: 50px;
+}
+
+.contenedor-PDP > div{
+    margin-right: 50px;
+}
+
+.imagenL{
+    width: 200px;
+    margin-left: 30px;
+}
+
+.informacion > h4{
+    text-align: center;
+    text-transform: capitalize;
+    margin-top: 10px;
+    color: #336862;
+    font-weight: 700;
+}
+
+.informacion > p > b{
+    color: #336862;
+}
+
+.cont-redes{
+    margin-top: 30px;
+}
+
+.cont-redes > h4{
+    text-align: center;
+    margin-right: 40px;
+    text-transform: capitalize;
+    color: #336862;
+    font-weight: 700;
+}
+
+.redes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.redes > a{
+    margin-right: 20px;
+}
+
+.bi{
+    font-size: 50px;
+    margin-right: 20px;
+    color: #336862;
+}
+
+.bi:hover{
+    color: #1f3e3b;
 }

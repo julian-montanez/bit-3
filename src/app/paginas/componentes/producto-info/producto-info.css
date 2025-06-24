@@ -13,6 +13,7 @@
 
 .contenedor-producto{
     width: 90%;
+    min-width: 575px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -67,7 +68,7 @@
     padding: 70px;
     border-radius: 20px;
     border: 3px solid brown;
-    background-color: #deb887;
+    background-color: #aeaeae;
 }
 
 .contenedor-informacion > div{
@@ -132,16 +133,16 @@
     padding: 10px 0;
     margin: auto;
     border-radius: 10px;
-    border: 3px solid brown;
+    border: 2px solid brown;
     text-decoration: none;
-    color: black;
+    color: azure;
     font-family: sans-serif;
     font-weight: 600;
-    background-color: rgb(160, 160, 160);
+    background-color: #397f78;
 }
 
 .button:hover{
-    background-color: rgb(125, 125, 125);
+    background-color: #214b47;
 }
 
 .logo-ML{

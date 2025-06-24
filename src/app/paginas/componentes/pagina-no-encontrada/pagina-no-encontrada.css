@@ -1,5 +1,6 @@
 .pagina-NE {
     width: 900px;
+    min-width: 575px;
     height: 550px;
     background-color: gray;
     position: relative;

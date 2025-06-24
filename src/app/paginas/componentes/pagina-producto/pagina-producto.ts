@@ -29,7 +29,7 @@ export class PaginaProducto implements OnInit {
     });
   }
 
-  categorias: string[] = ["all", "men's clothing", "jewelery", "electronics", "women's clothing"]
+  categorias: string[] = ["all", "jewelery", "electronics", "women's clothing", "men's clothing"]
   categoriaSeleccionada: string = "all";
   
   get productoFiltrado() {
