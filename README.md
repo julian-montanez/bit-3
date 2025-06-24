@@ -17,4 +17,4 @@
 * angular
 ---
 
-> autor: ![julian montañez](https://github.com/julian-montanez)
+> autor: [julian montañez](https://github.com/julian-montanez)
